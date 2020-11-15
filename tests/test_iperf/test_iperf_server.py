@@ -10,4 +10,4 @@ def test_iperf_server(iperf_server_mock):
     _iperf_server.exit()
     assert pid == '11111'
     assert iperf_server_mock.call_count == 2
-    iperf_server_mock.assert_has_calls([call('iperf3 -s &'), call('kill -15 11111')])
+    iperf_server_mock.assert_has_calls([call('iperf3 -s &'), call('kill -9 11111')])
